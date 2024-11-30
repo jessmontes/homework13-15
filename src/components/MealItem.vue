@@ -8,8 +8,8 @@ const { meal } = defineProps({
 </script>
 
 <template>
-    <div class="bg-white rounded-xl">
-        <router-link :to="{}">
+    <div class="bg-white shadow rounded-xl">
+        <router-link :to="{name:'MealDetails', params: {id: meal.idMeal}}">
             <img :src="meal.strMealThumb" class="rounded-t-xl h-48 object-cover w-full"/>
         </router-link>
 
@@ -19,4 +19,5 @@ const { meal } = defineProps({
         </div>
 
     </div>
+
 </template>
